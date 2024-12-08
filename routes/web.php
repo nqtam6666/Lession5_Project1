@@ -25,5 +25,5 @@ Route::get('/nqtam-register', function (){
 Route::post('/nqtam-register', [RegisterController::class, 'RegisterSubmit'])->name('register.submit');
 
 
-Route::get('/login',[LoginController::class,'index'])->name('login.index');
-Route::post('/login',[LoginController::class,'loginSubmit'])->name('login.submit');
+Route::get('/nqtam-login',[LoginController::class,'index'])->name('login.index');
+Route::post('/nqtam-login',[LoginController::class,'loginSubmit'])->name('login.submit');
