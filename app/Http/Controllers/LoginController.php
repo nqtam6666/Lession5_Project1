@@ -6,6 +6,13 @@ use Illuminate\Http\Request;
 
 class LoginController extends Controller
 {
+    public function index2(){
+        request()->session()->regenerateToken();
+
+        $token = csrf_token();
+        
+        return view('nqt-login', ['_token' => $token]);
+    }
     public function index(){
         request()->session()->regenerateToken();
 
